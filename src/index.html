@@ -1,19 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor M3</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./img/logo-m3.png" alt="Logo Desenvolvedor M3" />
+      <div class="sacola">
+        <img src="./img/shop.svg">
+        <div>
+          <span id="numeroCarrinho"></span>
+        </div>
+      </div>
+    </nav>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+    <div id="container">
+      <div id="cabecalhoMobile">
+        <h2>Blusas</h2>
+        <div class="grupoBotoes">
+          <button id="filtroMobile">Filtrar</button>
+          <button id="ordenarMobile">Ordenar</button>
+        </div>
+      </div>
 
-<body>
+      <div id="cabecalhoDesktop">
+        Blusas
+        <div class="dropDownMenu">
+          <button class="dropDownButton" id="ordenarPor">Ordenar por:</button>
+          <div class="dropDownContent">
+            <button type="button" id="ordenarMaisRecente">Mais recentes</button>
+            <button type="button" id="ordenarMenorPreco">Menor preço</button>
+            <button type="button" id="ordenarMaiorPreco">Maior preço</button>
+          </div>
+        </div>
+      </div>
 
-</body>
-<h1>Desafio m3</h1>
+      
+      <div class="conteudo">
+        <div id="containerFiltros" class="ocultarMobile">
+          <span>CORES</span>
+  
+          <div class="opcao">
+            <input type="checkbox" id="cor0" value="0">
+            <label for="cor0">Amarelo</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="cor1" value="1">
+            <label for="cor1">Azul</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="cor2" value="2">
+            <label for="cor2">Branco</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="cor3" value="3">
+            <label for="cor3">Cinza</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="cor4" value="4">
+            <label for="cor4">Laranja</label>
+          </div>
+  
+          <div class="ocultar" id="coresExtra">
+            <div class="opcao">
+              <input type="checkbox" id="cor5" value="5">
+              <label for="cor5">Verde</label>
+            </div>
+    
+            <div class="opcao">
+              <input type="checkbox" id="cor6" value="6">
+              <label for="cor6">Vermelho</label>
+            </div>
+              
+            <div class="opcao">
+              <input type="checkbox" id="cor7" value="7">
+              <label for="cor7">Preto</label>
+            </div>
+              
+            <div class="opcao">
+              <input type="checkbox" id="cor8" value="8">
+              <label for="cor8">Rosa</label>
+            </div>
+    
+            <div class="opcao">
+              <input type="checkbox" id="cor9" value="9">
+              <label for="cor9">Vinho</label>
+            </div>
+          </div>
+  
+  
+          <button id="toggleCores" type="button">Ver todas as cores</button>
+          TAMANHOS
+          <div class="opcoesTamanho">
+            <div class="opcaoTamanho" id="tamanhoP" data-selecionado="false">
+              <span>P</span>
+            </div>
 
-<script src="bundle.js"></script>
+            <div class="opcaoTamanho" id="tamanhoM" data-selecionado="false">
+              <span>M</span>
+            </div>
 
+            <div class="opcaoTamanho" id="tamanhoG" data-selecionado="false">
+              <span>G</span>
+            </div>
+
+            <div class="opcaoTamanho" id="tamanhoGG" data-selecionado="false">
+              <span>GG</span>
+            </div>
+            
+            <div class="opcaoTamanho" id="tamanhoU" data-selecionado="false">
+              <span>U</span>
+            </div>
+
+            <div class="opcaoTamanho" id="tamanho36" data-selecionado="false">
+              <span>36</span>
+            </div>
+
+            <div class="opcaoTamanho" id="tamanho38" data-selecionado="false">
+              <span>38</span>
+            </div>
+
+            <div class="opcaoTamanho" id="tamanho40" data-selecionado="false">
+              <span>40</span>
+            </div>
+
+            <div class="opcaoTamanho" id="tamanho42" data-selecionado="false">
+              <span>42</span>
+            </div>
+
+            <div class="opcaoTamanho" id="tamanho44" data-selecionado="false">
+              <span>44</span>
+            </div>
+
+            <div class="opcaoTamanho" id="tamanho46" data-selecionado="false">
+              <span>46</span>
+            </div>
+          </div>
+
+          <span>FAIXA DE PREÇO</span>
+  
+          <div class="opcao">
+            <input type="checkbox" id="preco0" value="0">
+            <label for="preco0">de R$0 até R$50</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="preco1" value="1">
+            <label for="preco1">de R$51 até R$150</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="preco2" value="2">
+            <label for="preco2">de R$151 até R$300</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="preco3" value="3">
+            <label for="preco3">de R$301 até R$500</label>
+          </div>
+  
+          <div class="opcao">
+            <input type="checkbox" id="preco4" value="4">
+            <label for="preco4">a partir de R$500</label>
+          </div>
+        </div>
+        
+        <div id="gridProdutos"></div>
+      </div>
+    </div>
+
+    <button class="carregarMais">CARREGAR MAIS</button>
+    <footer class="footer">Agência M3 - Agência de Performance Digital</footer>
+  </body>
+  <script src="bundle.js"></script>
+
+  
 </html>
